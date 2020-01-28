@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include <openssl/x509.h>
 #include <openssl/pem.h>
 #include <openssl/err.h>
@@ -55,6 +57,8 @@ void clean_up()
 
 int main(int argc, char* argv[])
 {
+	printf("CVE-2020-0601 PoC - CryptoAPI exploit by Layle (@layle_ctf)\n");
+
 	char* original = argv[1];
 	char* fake = argv[2];
 

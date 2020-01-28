@@ -15,3 +15,8 @@ openssl x509 -req -in cert.csr -CA trusted_ca.crt -CAkey MicrosoftECCProductRoot
 openssl pkcs12 -export -in cert.crt -inkey cert.key -certfile trusted_ca.crt -name "Code Signing" -out cert.p12
 ./osslsigncode sign -pkcs12 cert.p12 -n "Signed by Layle" -in <BINARY_TO_SIGN> -out <SIGNED_BINARY>
 ```
+
+## Result
+Note that the 7zip installer is usually not signed!
+
+![trusted](https://github.com/ioncodes/Curveball/blob/master/images/trusted.png?raw=true)

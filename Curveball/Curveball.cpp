@@ -67,6 +67,7 @@ int main(int argc, char* argv[])
 	EC_GROUP* group = get_group(public_key);
 	spoof(public_key, group);
 	write_private_key(fake, public_key);
+	clean_up();
 
 	return 0;
 }

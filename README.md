@@ -1,5 +1,5 @@
 # Curveball
-A PoC for [CVE-2020-0601](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0601). A detailed blog post can be found [here](https://blog.layle.io/uncovering-cve-2020-0601/). This exploit allows you to create a fake trusted certificate by abusing how CryptoAPI handles certain parameters on ECC based certificates.
+A PoC for [CVE-2020-0601](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0601). A detailed blog post can be found [here](http://web.archive.org/web/20200224210145/https://blog.layle.io/uncovering-cve-2020-0601/). This exploit allows you to create a fake trusted certificate by abusing how CryptoAPI handles certain parameters on ECC based certificates.
 
 ## Setup
 Clone the repository and open it in Visual Studio 2019. Switch to Release and compile it. You can find prebuilt binaries [here](https://github.com/ioncodes/Curveball/releases).
